@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>FORM</title>
+  </head>
+  <body>
+    <section class="container">
+      <form action="https://formspree.io/f/mvoelezv" method="post" class="form" onsubmit="return validasiform()">
+        <h1>FORM</h1>
+
+        <div class="input-box">
+          <label for="namadepan">NAMA LENGKAP :</label>
+          <input type="text" name="namalengkap" id="namalengkap" placeholder="Masukkan Nama Lengkap" />
+        </div>
+
+        <div class="input-box">
+          <label for="email">EMAIL :</label>
+          <input type="email" name="email" id="email" placeholder="example@gmail.com" />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label for="telpon">TELPON :</label>
+            <input type="tel" name="telpon" id="telpon" placeholder="+62" pattern="\d{10,13}" />
+          </div>
+          <div class="input-box">
+            <label for="tanggallahir">TANGGAL LAHIR :</label>
+            <input type="date" name="tanggallahir" id="tanggallahir" />
+          </div>
+        </div>
+
+        <div class="gender">
+          <label>JENIS KELAMIN </label>
+          <div>
+            <input type="radio" id="laki-laki" name="jeniskelamin" value="Laki-Laki" />
+            <label for="laki-laki">Laki-Laki</label>
+          </div>
+          <div>
+            <input type="radio" id="perempuan" name="jeniskelamin" value="Perempuan" />
+            <label for="perempuan">Perempuan</label>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <label>ALAMAT :</label>
+          <input type="text" name="kab" id="kab" placeholder="Masukkan Kabupaten" />
+          <input type="text" name="kec" id="kec" placeholder="Masukkan Kecamatan" />
+          <input type="text" name="kel" id="kel" placeholder="Masukkan Desa / Kelurahan" />
+        </div>
+
+        <div class="buttons">
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" onclick="return confirmReset()" />
+        </div>
+      </form>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
